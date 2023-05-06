@@ -17,7 +17,7 @@ const signupSchema = Joi.object({
     then: Joi.string().required().min(3).max(50),
     otherwise: Joi.string().optional(),
   }),
-  hobbies: Joi.array().items([Joi.string(), Joi.number()]),
+  hobbies: Joi.array().items(Joi.string(), Joi.number()),
   acceptTos: Joi.boolean().truthy("Yes").valid(true).required(),
 });
 
